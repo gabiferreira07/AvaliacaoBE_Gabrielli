@@ -12,16 +12,6 @@ import com.forms.repository.ClienteRepository;
 @Service
 public class ClienteService {
 	private final ClienteRepository clienteRepository;
-	
-	@Autowired
-	public ClienteService(ClienteRepository clienteRepository) {
-		this.clienteRepository = clienteRepository;
-	}
-
-	public List<Cliente> getAllClientes(){
-		return clienteRepository.findAll();
-	}
-	//Query Methods
 	public List<Cliente> buscarClientePorNome(String nome){
 		return clienteRepository.findByNome(nome);
 	}
